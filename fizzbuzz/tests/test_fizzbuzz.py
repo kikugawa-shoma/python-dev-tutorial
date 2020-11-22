@@ -1,7 +1,8 @@
 # 実行コマンド
-# python -m unittest
+# python-dev-tutorialにて
+# python -m unittest fizzbuzz.tests_test_fizzbuzz
 from unittest import TestCase
-from ..fizzbuzz.fizzbuzz import fizzbuzz
+from fizzbuzz.fizzbuzz import fizzbuzz
 
 
 class TestFizzBuzz(TestCase):
