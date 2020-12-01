@@ -1,6 +1,6 @@
 # 実行コマンド
 # python-dev-tutorialにて
-# python -m unittest fizzbuzz.tests_test_fizzbuzz
+# python -m unittest fizzbuzz.tests.test_fizzbuzz
 from unittest import TestCase
 from fizzbuzz.fizzbuzz import fizzbuzz
 
