@@ -3,11 +3,23 @@ SHELL=/bin/bash
 .PHONY: unittest doctest
 
 unittest1:
-	python3 -m unittest discover -v
+	python -m unittest discover -v
 
 unittest2:
-	python3 -m unittest fizzbuzz.tests.test_fizzbuzz -v
+	python -m unittest fizzbuzz.tests.test_fizzbuzz -v
 
 doctest:
-	python3 -m doctest -v fizzbuzz/*.py
+	python -m doctest -v fizzbuzz/*.py
+
+install:
+	python setup.py install
+
+uninstall:
+	pip3 uninstall fizzbuzz -y
+
+clean:
+	rm -rf build
+	rm -rf dist
+	rm -rf *.egg-info
+	find . -name "*pycache*" | xargs rm -rf
 
