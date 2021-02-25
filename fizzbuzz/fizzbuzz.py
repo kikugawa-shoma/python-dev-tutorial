@@ -1,17 +1,18 @@
-def fizzbuzz(n: int):
+def fizzbuzz(n: int, fizz: int = 3, buzz: int = 5) -> str:
     """
-    >>> fizzbuzz(30)
-    'FizzBuzz'
-    >>> fizzbuzz(10)
-    'Buzz'
-    >>> fizzbuzz(27)
-    'Fizz'
+      >>> fizzbuzz(30)
+      'FizzBuzz'
+      >>> fizzbuzz(10)
+      'Buzz'
+      >>> fizzbuzz(27)
+      'Fizz'
     """
-    if n % 15 == 0:
+
+    if n % (fizz*buzz) == 0:
         return "FizzBuzz"
-    elif n % 3 == 0:
+    elif n % fizz == 0:
         return "Fizz"
-    elif n % 5 == 0:
+    elif n % buzz == 0:
         return "Buzz"
     else:
         return str(n)
@@ -20,3 +21,5 @@ def fizzbuzz(n: int):
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
+    a = 2
+    fizzbuzz(a)
